@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "micrograph-batch: CSV-driven batch processing for microscopy images"
+authors:
+  - family-names: "Li"
+    given-names: "Mengwei"
+version: 1.0.0
+date-released: 2026-07-16
+license: MIT
+repository-code: "https://github.com/ArGoN-SpUTTerING/micrograph-batch"
+abstract: >-
+  A command-line tool that converts raw 16-bit microscopy TIFFs into
+  publication-ready JPEGs with calibrated scale bars. All processing
+  decisions (crop, brightness, contrast, scale-bar geometry) are recorded
+  in a CSV config, making every output figure reproducible from the file
+  alone. Includes a visual crop editor and bit-depth normalisation for
+  narrow-band scientific camera output.
+keywords:
+  - microscopy
+  - image-processing
+  - scale-bar
+  - reproducibility
+  - batch-processing
