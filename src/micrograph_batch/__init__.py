@@ -15,7 +15,7 @@ from micrograph_batch.config import (
 from micrograph_batch.batch import process_task, run_batch
 from micrograph_batch.imaging import add_scale_bar, prepare_image_for_jpeg
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 __all__ = [
     "ConfigEntry",

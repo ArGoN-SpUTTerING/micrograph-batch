@@ -5,7 +5,7 @@ title: "micrograph-batch: CSV-driven batch processing for microscopy images"
 authors:
   - family-names: "Li"
     given-names: "Mengwei"
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-07-16
 license: MIT
 repository-code: "https://github.com/ArGoN-SpUTTerING/micrograph-batch"
