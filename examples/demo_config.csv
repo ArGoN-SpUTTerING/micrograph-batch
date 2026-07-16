@@ -1,0 +1,4 @@
+enabled,filename,output_name,um_per_px,bar_um,crop_left,crop_top,crop_right,crop_bottom,brightness,contrast,bar_position,bar_margin,bar_thickness,bar_color,show_label,bar_label,label_color,label_font_size,jpeg_quality
+TRUE,droplets_16bit.tif,droplets_scalebar.jpg,0.325,100,,,,,1.0,1.1,bottom-right,50,12,white,TRUE,100 um,white,36,95
+TRUE,texture_t0_16bit.tif,texture_t0_cropped.jpg,0.325,50,200,150,1400,1050,1.05,1.2,bottom-left,50,12,white,TRUE,50 um,white,36,95
+TRUE,texture_t1_16bit.tif,texture_t1_cropped.jpg,0.325,50,200,150,1400,1050,1.05,1.2,bottom-left,50,12,white,TRUE,50 um,white,36,95
