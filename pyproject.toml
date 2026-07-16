@@ -26,7 +26,7 @@ dev = ["pytest>=7"]
 micrograph-batch = "micrograph_batch.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/mengweili/micrograph-batch"
+Homepage = "https://github.com/ArGoN-SpUTTerING/micrograph-batch"
 
 [tool.setuptools.packages.find]
 where = ["src"]

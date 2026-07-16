@@ -56,7 +56,7 @@ A failed row is reported with its CSV row number and does not stop the batch.
 ## Install
 
 ```bash
-pip install git+https://github.com/mengweili/micrograph-batch.git
+pip install git+https://github.com/ArGoN-SpUTTerING/micrograph-batch.git
 # or, from a clone:
 pip install -e .
 ```
