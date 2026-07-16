@@ -20,7 +20,7 @@ classifiers = [
 dependencies = ["Pillow>=9.0"]
 
 [project.optional-dependencies]
-dev = ["pytest>=7"]
+dev = ["pytest>=7", "numpy>=1.24"]
 
 [project.scripts]
 micrograph-batch = "micrograph_batch.cli:main"
