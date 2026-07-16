@@ -53,6 +53,36 @@ class TestScaleBar:
         assert image.getpixel((379, 275)) == (255, 255, 255)
         assert image.getpixel((200, 150)) == (0, 0, 0)
 
+    def test_label_does_not_touch_bar(self):
+        # Regression: Pillow anchors text at the layout box, not the ink box,
+        # so large labels used to sink onto the bar.
+        image = Image.new("RGB", (600, 400), "black")
+        add_scale_bar(
+            image,
+            um_per_px=0.5,
+            bar_um=100,
+            position="bottom-right",
+            margin=50,
+            thickness=12,
+            color="white",
+            show_label=True,
+            label="100 um",
+            label_color="white",
+            label_font_size=36,
+        )
+        bar_top = 400 - 50 - 12
+        pixels = image.load()
+        # the gap rows immediately above the bar must stay ink-free
+        for y in range(bar_top - 6, bar_top):
+            for x in range(0, 600):
+                assert pixels[x, y] == (0, 0, 0), f"ink at ({x}, {y}) inside the gap"
+        # ...but the label must exist somewhere above the gap
+        assert any(
+            pixels[x, y] != (0, 0, 0)
+            for y in range(0, bar_top - 6)
+            for x in range(0, 600)
+        )
+
     def test_bar_wider_than_image_raises(self):
         image = Image.new("RGB", (100, 100), "black")
         with pytest.raises(ValueError):

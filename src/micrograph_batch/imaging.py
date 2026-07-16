@@ -166,18 +166,25 @@ def add_scale_bar(
         font = load_font(label_font_size)
         try:
             text_box = draw.textbbox((0, 0), label, font=font)
-            text_width = text_box[2] - text_box[0]
-            text_height = text_box[3] - text_box[1]
         except AttributeError:
             text_width, text_height = draw.textsize(label, font=font)
-        text_x = x1 + max(0, (bar_px - text_width) // 2)
+            text_box = (0, 0, text_width, text_height)
+
+        # draw.text() anchors at the layout-box origin, which sits above the
+        # visible ink by text_box[1] px — compensate so the gap to the bar is
+        # measured from the ink itself, not the layout box.
+        ink_left, ink_top, ink_right, ink_bottom = text_box
+        text_width = ink_right - ink_left
+        text_height = ink_bottom - ink_top
+        gap = 6
+        text_x = x1 + max(0, (bar_px - text_width) // 2) - ink_left
 
         if position.startswith("bottom"):
-            text_y = max(0, y1 - text_height - 6)
+            ink_target_top = max(0, y1 - text_height - gap)
         else:
-            text_y = min(height - text_height, y2 + 6)
+            ink_target_top = min(height - text_height, y2 + gap)
 
-        draw.text((text_x, text_y), label, fill=label_color, font=font)
+        draw.text((text_x, ink_target_top - ink_top), label, fill=label_color, font=font)
 
     return image
 
