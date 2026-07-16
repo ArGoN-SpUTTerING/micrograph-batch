@@ -4,7 +4,7 @@
 
 ![Before and after](docs/images/before_after.jpg)
 
-Built during my PhD (soft-matter physics, Utrecht University) to process the optical-microscopy datasets behind three thesis chapters — thousands of frames across ~30 experimental series — after doing it by hand in ImageJ stopped scaling.
+Built during my PhD to process the optical-microscopy datasets behind three thesis chapters — thousands of frames across ~30 experimental series — after doing it by hand in ImageJ stopped scaling.
 
 ## The problem it solves
 
