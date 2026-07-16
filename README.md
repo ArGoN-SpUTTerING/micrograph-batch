@@ -1,5 +1,9 @@
 # micrograph-batch
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21396630.svg)](https://doi.org/10.5281/zenodo.21396630)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
+
 **CSV-driven batch processing for microscopy images** — convert raw 16-bit TIFFs into publication-ready JPEGs with calibrated scale bars, reproducibly, hundreds at a time.
 
 ![Before and after](docs/images/before_after.jpg)

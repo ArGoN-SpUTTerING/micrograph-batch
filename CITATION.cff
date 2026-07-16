@@ -7,6 +7,11 @@ authors:
     given-names: "Mengwei"
 version: 1.0.1
 date-released: 2026-07-16
+doi: 10.5281/zenodo.21396631
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21396630
+    description: "Concept DOI resolving to the latest version"
 license: MIT
 repository-code: "https://github.com/ArGoN-SpUTTerING/micrograph-batch"
 abstract: >-
